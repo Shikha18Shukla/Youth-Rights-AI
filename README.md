@@ -287,7 +287,7 @@ Only trusted and official documents are used.
 
 # ⚠️ Disclaimer
 
-This application is designed for **educational and informational purposes only**. It helps users understand legal rights based on official sources but **does not provide legal advice or replace consultation with a qualified legal professional.
+This application is designed for **educational and informational purposes only**. It helps users understand legal rights based on official sources but does not provide legal advice or replace consultation with a qualified legal professional.
 
 ---
 
