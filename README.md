@@ -2,17 +2,34 @@
 
 **An AI-powered legal information assistant designed to help students and young adults in India understand their rights through accessible, retrieval-grounded explanations.**
 
+<<<<<<< HEAD
 Youth Rights AI aims to make legal information easier to understand by combining document retrieval, semantic search, and large language models. The long-term goal is to help users explore relevant legal provisions, understand their meaning in simple language, and identify reliable sources for further reading.
 
 > **Project status:** Active development — backend foundation implemented; RAG integration, frontend, testing, and deployment are ongoing goals.
+=======
+Youth Rights AI helps users understand their legal rights in everyday situations by combining **Retrieval-Augmented Generation (RAG)** with official Indian legal documents. Every response is grounded in retrieved legal sources and presented in simple, easy-to-understand language.
+>>>>>>> e7af348 (feat: build Youth Rights AI platform and diagnostics)
 
 ---
 
 ## 📌 Project Overview
 
+<<<<<<< HEAD
 Legal information can be difficult to understand because laws, regulations, and official documents often use complex terminology. Students and young adults may not know which provisions apply to situations involving education, internships, online harassment, consumer rights, or other everyday issues.
 
 Youth Rights AI is being developed as a legal information and decision-support application that will help users ask questions in natural language and receive understandable explanations grounded in relevant legal documents.
+=======
+> ✅ **Core Application Functional**
+
+* ✅ Backend API (Node.js + Express)
+* ✅ Database (MongoDB + Mongoose)
+* ✅ Authentication & Authorization
+* ✅ LLM Provider Abstraction (OpenAI, Anthropic, Ollama)
+* ✅ Legal Document Seeding (32 provisions across 14 topics)
+* ✅ Frontend (React + TypeScript + Tailwind CSS)
+* ✅ Automated Tests (33 tests passing)
+* ⏳ Deployment
+>>>>>>> e7af348 (feat: build Youth Rights AI platform and diagnostics)
 
 The project focuses on:
 - Making legal information more accessible.
@@ -22,6 +39,7 @@ The project focuses on:
 - Supporting evidence-based responses and legal source attribution.
 - Encouraging users to consult qualified legal professionals when necessary.
 
+<<<<<<< HEAD
 ## 🎯 Objectives
 
 1. Develop an AI-powered legal question-answering system.
@@ -52,6 +70,9 @@ The project focuses on:
 | Nodemon | Backend development workflow |
 
 The frontend technology and deployment platform will be documented once their implementation is confirmed.
+=======
+## 🎯 What Can It Answer?
+>>>>>>> e7af348 (feat: build Youth Rights AI platform and diagnostics)
 
 ## ✅ Work Completed So Far
 
@@ -62,31 +83,87 @@ The frontend technology and deployment platform will be documented once their im
 - Set up a dedicated backend directory named `server`.
 - Organized backend code into separate folders for configuration, controllers, middleware, models, routes, and services.
 
+<<<<<<< HEAD
 ### 2. Backend configuration
 
 Implemented configuration modules for:
 - Database connectivity through `server/config/db.js`.
 - Ollama integration through `server/config/ollama.js`.
+=======
+## 🏗️ System Architecture
+
+```text
+                User
+                  │
+                  ▼
+          React Frontend (TypeScript)
+                  │
+                  ▼
+          Express Backend (Node.js)
+                  │
+          ┌───────┴───────┐
+          │               │
+          ▼               ▼
+   MongoDB Database   LLM API
+   (Users, Chats,     (OpenAI /
+    Embeddings)       Anthropic /
+          │            Ollama)
+          ▼
+   Vector Store
+   (Legal Provisions)
+```
+>>>>>>> e7af348 (feat: build Youth Rights AI platform and diagnostics)
 
 ### 3. API controllers
 
+<<<<<<< HEAD
 Created controllers for:
 - Authentication.
 - Chat functionality.
 - Document management.
 - Administrative operations.
 - Analytics.
+=======
+## ⚙️ Tech Stack
+
+| Layer       | Technology                                   |
+| ----------- | -------------------------------------------- |
+| Frontend    | React, TypeScript, Tailwind CSS, Vite        |
+| Backend     | Node.js, Express, JWT, Helmet, Rate Limiting |
+| Database    | MongoDB, Mongoose                            |
+| AI          | OpenAI / Anthropic / Ollama (configurable)   |
+| Embeddings  | Xenova/all-MiniLM-L6-v2 (with fallback)      |
+| Testing     | Jest, Supertest, mongodb-memory-server       |
+
+---
+
+## 🏛️ Knowledge Base
+>>>>>>> e7af348 (feat: build Youth Rights AI platform and diagnostics)
 
 ### 4. Backend routes
 
+<<<<<<< HEAD
 Created route modules for:
 - Authentication endpoints.
 - Chat endpoints.
 - Document endpoints.
 - Administrative endpoints.
+=======
+* 🇮🇳 Constitution of India (Articles 14-21, 21A, 23-24, 45, 51A)
+* 📚 UGC Anti-Ragging Regulations, 2009
+* ⚖️ Indian Contract Act, 1872
+* 🛡️ POSH Act, 2013 (Sexual Harassment at Workplace)
+* 💻 Information Technology Act, 2000
+* 📋 Bharatiya Nyaya Sanhita (BNS), 2023
+* 🛒 Consumer Protection Act, 2019
+* 🛒 Consumer Protection (E-Commerce) Rules, 2020
+* 🏢 Minimum Wages Act, 1948
+* 🌐 National Cyber Crime Portal Resources
+>>>>>>> e7af348 (feat: build Youth Rights AI platform and diagnostics)
 
 ### 5. Middleware
 
+<<<<<<< HEAD
 Added middleware modules for:
 - Authentication.
 - Role-based authorization.
@@ -186,11 +263,140 @@ Youth-Rights-AI/
 │
 ├── .gitignore
 ├── package.json
+=======
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Node.js 18+
+* MongoDB (local or Atlas)
+* An API key for your chosen LLM provider (OpenAI or Anthropic)
+
+### Backend Setup
+
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Configure environment variables
+cp .env.example .env
+# Edit .env with your MongoDB URI and LLM API key
+
+# 3. Start the server
+npm run dev
+```
+
+The server runs on `http://localhost:5000` by default.
+
+### Frontend Setup
+
+```bash
+cd frontend
+
+# 1. Install dependencies
+npm install
+
+# 2. Configure environment variables
+cp .env.example .env
+# Set VITE_API_URL=http://localhost:5000/api
+
+# 3. Start the development server
+npm run dev
+```
+
+The frontend runs on `http://localhost:5173` by default.
+
+### Build for Production
+
+```bash
+# Frontend
+cd frontend
+npm run build
+```
+
+---
+
+## 🔧 Environment Variables
+
+### Backend (`.env`)
+
+| Variable            | Description                              | Required |
+| ------------------- | ---------------------------------------- | -------- |
+| `PORT`              | Server port (default: 5000)              | No       |
+| `NODE_ENV`          | Environment (development/production)    | No       |
+| `MONGO_URI`         | MongoDB connection string                | Yes      |
+| `JWT_SECRET`        | Secret for JWT token signing             | Yes      |
+| `CLIENT_URL`        | Frontend URL for CORS                    | No       |
+| `LLM_PROVIDER`      | LLM provider: `openai`, `anthropic`, or `ollama` | Yes |
+| `OPENAI_API_KEY`    | OpenAI API key (if using OpenAI)         | For OpenAI |
+| `OPENAI_MODEL`      | OpenAI model (default: gpt-4o-mini)      | No       |
+| `ANTHROPIC_API_KEY`| Anthropic API key (if using Anthropic)  | For Anthropic |
+| `ANTHROPIC_MODEL`  | Anthropic model                          | No       |
+| `OLLAMA_BASE_URL`   | Ollama server URL (default: localhost)   | No       |
+| `DEFAULT_MODEL`     | Ollama model (default: llama3.2)         | No       |
+| `EMBEDDING_MODEL`   | Embedding model                          | No       |
+
+### Frontend (`frontend/.env`)
+
+| Variable       | Description                          | Required |
+| -------------- | ------------------------------------ | -------- |
+| `VITE_API_URL` | Backend API URL                      | Yes      |
+
+---
+
+## 🧪 Running Tests
+
+```bash
+npm test
+```
+
+Uses Jest with mongodb-memory-server for isolated, repeatable tests.
+
+**Test coverage:**
+* Authentication (register, login, validation)
+* Chat endpoints (auth required, empty questions)
+* Legal seeder (idempotency, completeness)
+* RAG pipeline (sanitization, citation validation)
+* Database configuration
+
+---
+
+## 📁 Project Structure
+
+```text
+Youth-Rights-AI/
+├── server/                  # Backend source
+│   ├── config/              # DB and Ollama config
+│   ├── controllers/         # Route handlers
+│   ├── middlewares/         # Auth, rate limiting, errors
+│   ├── models/              # Mongoose schemas
+│   ├── routes/              # Express routes
+│   ├── services/            # Business logic
+│   │   ├── llmProvider.js   # LLM provider abstraction
+│   │   ├── ragService.js    # RAG pipeline
+│   │   ├── legalSeeder.js   # Legal document seeder
+│   │   ├── embeddingService.js
+│   │   └── vectorStoreService.js
+│   ├── data/
+│   │   └── legalTopics.js   # Legal knowledge base
+│   └── uploads/             # Uploaded documents
+├── frontend/                # React frontend
+│   ├── src/
+│   │   ├── components/      # UI components
+│   │   ├── api/             # API client
+│   │   ├── types/           # TypeScript types
+│   │   └── App.tsx          # Main app
+│   └── ...
+├── tests/                   # Backend tests
+├── server.js                # Entry point
+├── .env.example             # Environment template
+>>>>>>> e7af348 (feat: build Youth Rights AI platform and diagnostics)
 └── README.md
 ```
 
 *This tree describes the backend files currently added to the repository. Additional files and frontend components may be added as development progresses.*
 
+<<<<<<< HEAD
 ## 🔄 Planned RAG Workflow
 
 The intended question-answering pipeline is:
@@ -349,3 +555,16 @@ GitHub: [@Shikha18Shukla](https://github.com/Shikha18Shukla)
 ---
 
 *Building AI tools to make legal information more accessible, understandable, and evidence-grounded.*
+=======
+## ⚠️ Disclaimer
+
+This application is designed for **educational and informational purposes only**. It helps users understand legal rights based on official sources but does not provide legal advice or replace consultation with a qualified legal professional.
+
+---
+
+## 👨‍💻 Author
+
+**Made with ❤️ by Shikha Shukla**
+
+Building AI solutions that make legal information simpler, more accessible, and easier to understand.
+>>>>>>> e7af348 (feat: build Youth Rights AI platform and diagnostics)

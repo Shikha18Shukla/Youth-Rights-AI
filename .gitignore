@@ -1,5 +1,4 @@
-﻿@"
-node_modules/
+﻿node_modules/
 .env
 .env.*
 !.env.example
@@ -7,4 +6,6 @@ dist/
 build/
 coverage/
 .DS_Store
-"@ | Set-Content -Encoding utf8 .gitignore
+server/uploads/
+*.log
+.test-temp/

@@ -5,12 +5,20 @@ const embeddingSchema = new mongoose.Schema(
     documentId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Document',
-      required: true,
+      default: null,
       index: true,
     },
     documentName: {
       type: String,
       required: true,
+    },
+    documentCategory: {
+      type: String,
+      default: 'General',
+    },
+    documentTopic: {
+      type: String,
+      default: 'General',
     },
     chunkIndex: {
       type: Number,
@@ -27,6 +35,10 @@ const embeddingSchema = new mongoose.Schema(
     vector: {
       type: [Number], // 384-dim array for all-MiniLM-L6-v2
       required: true,
+    },
+    metadata: {
+      type: mongoose.Schema.Types.Mixed,
+      default: {},
     },
   },
   { timestamps: true }

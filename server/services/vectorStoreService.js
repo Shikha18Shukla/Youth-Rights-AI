@@ -34,7 +34,12 @@ const searchVectorStore = async (queryVector, topK = 4, minScore = 0.25) => {
       const score = cosineSimilarity(queryVector, item.vector);
       return {
         ...item,
-        score
+        score,
+        law: item.metadata?.law || item.documentName,
+        article: item.metadata?.article || null,
+        sourceUrl: item.metadata?.sourceUrl || null,
+        category: item.documentCategory || item.metadata?.category || 'General',
+        topic: item.documentTopic || item.metadata?.topic || 'General',
       };
     });
 
